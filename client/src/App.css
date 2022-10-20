@@ -1,0 +1,219 @@
+body,
+#root {
+  height: 100vh;
+  background-color: rgb(194, 194, 194);
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+}
+
+h2 {
+  margin: 0.5rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 2px 2px 6px 2px #000000ab;
+}
+
+header .logo {
+  height: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.mode-type-selector {
+  margin: 0.5rem 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+.mode-type-selector label {
+  margin: 0.5rem;
+  width: 40%;
+  white-space: nowrap;
+}
+
+.tile-type-selector {
+  margin: 0.5rem 0;
+  position: absolute;
+  bottom: -4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 20rem;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+.tile-type-selector label {
+  margin: 0.5rem;
+}
+.tile-type-selector img,
+.tile-type-selector svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.tile-type-selector label input {
+  display: none;
+}
+.tile-type-selector label input:checked + img,
+.tile-type-selector label input:checked + svg {
+  outline: 2px solid red;
+}
+
+.row {
+  display: flex;
+}
+.row .tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: green;
+  position: relative;
+  user-select: none;
+}
+
+.row .tile img,
+.row .tile svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tile.house {
+  background-image: url("./Assets/grass.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.drawingMode .tile:hover {
+  outline: 2px solid red;
+}
+.tile.house:hover {
+  box-shadow: inset 0px 0px 5px 3px #00000063;
+  transition: 0.1s ease-in-out;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000066;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-inner {
+  background-color: white;
+  padding: 1rem;
+  padding-top: 3rem;
+  position: relative;
+}
+
+.modal-close {
+  padding: 0.5rem;
+  background-color: rgb(255, 151, 151);
+  border: 0;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transition: 0.1s ease-in-out;
+}
+.modal-close:hover {
+  background-color: red;
+  color: white;
+}
+
+.modal-inner .booking-section label {
+  margin-left: 0.5rem;
+}
+.modal-inner .booking-section input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.modal-inner .booking-section-calendar {
+  margin: 0 auto;
+}
+
+.modal-inner .booking-section .react-datepicker__day--excluded {
+  background-color: rgb(255, 151, 151);
+}
+.modal-inner .booking-section button {
+  padding: 0.5rem;
+  background-color: #00beda;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  transition: 0.1s ease-in-out;
+}
+
+.modal-inner .booking-section button:hover {
+  background-color: #008ba0;
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-section .booking-section-calendar {
+  display: flex;
+}
+
+.number-of-bookings {
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  z-index: 100;
+  font-size: .8rem;
+  text-align: center;
+  right: 0;
+  pointer-events: none;
+}
+
+dl {
+  padding: 1rem;
+  margin: 0;
+}
+
+dt,
+dd {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+dd {
+  font-weight: bold;
+}
