@@ -1,13 +1,17 @@
 # VillageVille
 
-Backend is express.js and frontend is React.js
+Backend körs med express.js och frontend är React.js
 
-## Available Scripts
+## Uppstart
 
-In the project directory, you can run:
+Klona repot till lokal miljö
+
+### `npm install`
+
+Installera dependenices 
 
 ### `npm run start`
 
-Run it the root folder and it will run the app with both server and client side in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Kör kommandot direkt i rootmappen för VillageVille och den kommer då starta upp både backendservern och frontend-klienten.
 
+Klienten kommer du åt via  [http://localhost:3000](http://localhost:3000)
