@@ -15,7 +15,7 @@ Klona repot till lokal miljö
 3. root/server-mappen:
    1. `npm install`
 4. Tillbaka till root-mappen:
-   1. `npm run start
+   1. `npm run start`
 
 Kör kommandot direkt i rootmappen för VillageVille och den kommer då starta upp både backendservern och frontend-klienten.
 
